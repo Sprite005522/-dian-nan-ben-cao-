@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d89a25d7;
+    /* 设置为深蓝色 */
+    font: 16px/28px 'Microsoft YaHei';
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* 防止滚动时出现滚动条 */
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, #d89a25d7, transparent);
+    z-index: 10;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#moon {
+    z-index: 0.6;
+    /* 月亮在山脉之上 */
+}
+
+#mountain {
+    z-index: 1;
+    /* 山脉在背景之下 */
+
+}
+
+#text {
+    position: relative;
+    z-index: 0.5;
+    /* 确保文字在最上层 */
+    color: rgb(252, 252, 252);
+    /* font-size: 9em; */
+    text-shadow: 6px 6px 8px rgba(133, 147, 29, 0.5);
+    top: -60px;
+    font: 8em 'STLiti';
+}
+
+#road {
+    position: absolute;
+    /* 确保 road 图片绝对定位 */
+    z-index: 0;
+    /* 在 mountain 之下 */
+    height: auto;
+    /* 根据图片的实际高度自适应 */
+    width: 100%;
+    /* 使 road 占满宽度 */
+    bottom: 0;
+    /* 将 road 图片放置在底部 */
+    background-color: transparent;
+    /* 确保背景色透明，避免覆盖 */
+    /* background-color: red; */
+}
+
+#fp {
+    text-align: center;
+}
+
+#sp {
+    text-align: left;
+    margin-left: 425px;
+}
+
+#tp {
+    text-align: center;
+}
+
+#jc {
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    /* 两个盒子之间有空隙 */
+    gap: 40px;
+    /* 设置盒子之间的间距 */
+}
+
+/* 设置盒子的宽度和背景颜色 */
+#box {
+    flex: 1;
+    /* 使两个盒子的宽度相等 */
+    padding: 20px;
+    /* 内边距 */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    /* 添加边框 */
+}
+
+.box:first-child {
+    /* background-color: #e0e0e0; */
+    /* 左边盒子的背景色 */
+    width: 477px;
+    height: 472px;
+    margin-left: 420px;
+}
+
+.box:last-child {
+    /* background-color: #d0d0d0; */
+    /* 右边盒子的背景色 */
+    width: 477px;
+    height: 472px;
+    margin-right: 420px;
+}
+
+#b1 {
+    width: 1530px;
+    height: 586px;
+}
+
+#biao {
+    text-align: center;
+}
+
+#biaoge {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#biaoge th,
+#biaoge td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#yejiao {
+    text-align: center;
+    margin: auto;
+}
+
+#yetou {
+    text-align: center;
+}
+
+.left-space {
+    width: 477px;
+    height: 472px;
+    margin-left: 420px;
+}
+
+.right-space {
+    width: 477px;
+    height: 472px;
+    margin-right: 420px;
+}
+
+#wen {
+    margin-top: 10px;
+    margin-left: 210px;
+    margin-right: 210px;
+}
